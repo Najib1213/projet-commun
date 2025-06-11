@@ -1,0 +1,8 @@
+Array
+(
+    [prenom] => Arthur
+    [nom] => Ferreira Dias
+    [email] => arfd62378@eleve.isep.fr
+    [password] => Emifpaac1$
+    [confirm_password] => Emifpaac1$
+)
