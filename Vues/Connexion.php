@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../Css/Accueil.css">
 </head>
 <body class="bg-gray-900 text-white">
-<!-- Navigation -->
 <nav class="fixed top-0 w-full z-50 glass-effect">
     <div class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
@@ -81,5 +80,6 @@
 </section>
 
 <script src="../Js/Accueil.js"></script>
+
 </body>
 </html>

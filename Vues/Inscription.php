@@ -86,5 +86,7 @@
         </div>
     </section>
     <script src="../Js/Accueil.js"></script>
+    <script src="../Js/mdp.js"></script>
+
 </body>
 </html>

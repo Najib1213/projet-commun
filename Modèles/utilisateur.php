@@ -9,7 +9,6 @@ function creerUtilisateur($prenom, $nom, $email, $mot_de_passe) {
         $stmt = $pdo->prepare("INSERT INTO utilisateurs (prenom, nom, email, mot_de_passe) VALUES (?, ?, ?, ?)");
         return $stmt->execute([$prenom, $nom, $email, $hash]);
     } catch (PDOException $e) {
-        // Debug temporaire : log l'erreur pour analyse
         file_put_contents(__DIR__ . '/log_erreurs.txt', $e->getMessage()."\n", FILE_APPEND);
         return false;
     }
