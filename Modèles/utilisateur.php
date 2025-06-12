@@ -21,4 +21,11 @@ function verifierConnexion($email, $mot_de_passe) {
     $stmt->execute([$email, $hash]);
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+function emailExisteDeja($email) {
+    global $pdo;
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM utilisateurs WHERE email = ?");
+    $stmt->execute([$email]);
+    return $stmt->fetchColumn() > 0;
+}
+
 ?>

@@ -1,3 +1,13 @@
+<?php
+require_once '../Modèles/session.php';
+
+if (!utilisateurConnecte()) {
+    header('Location: Connexion.php');
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,12 +29,20 @@
         </div>
         <h1 class="text-xl font-bold ml-3">TheaterSound</h1>
       </div>
-      <div class="hidden md:flex space-x-6">
-        <a href="Accueil.html" class="nav-link hover:text-indigo-400 transition-colors">Accueil</a>
-        <a href="tableau.html" class="nav-link hover:text-indigo-400 transition-colors">Tableau de bord</a>
-        <a href="capteur.html" class="nav-link text-indigo-400 hover:text-indigo-300 transition-colors">Capteurs</a>
+<div class="hidden md:flex space-x-6">
+    <a href="Accueil.php" class="nav-link hover:text-indigo-400 transition-colors">Accueil</a>
+
+    <?php if (utilisateurConnecte()): ?>
+        <a href="tableau.php" class="nav-link hover:text-indigo-400 transition-colors">Tableau de bord</a>
+        <a href="capteur.php" class="nav-link text-indigo-400 hover:text-indigo-300 transition-colors">Capteurs</a>
+        <a href="deconnexion.php" class="nav-link text-red-400 hover:text-red-300 transition-colors">
+            Déconnexion (<?= htmlspecialchars($_SESSION['user']['prenom'] ?? 'Utilisateur') ?>)
+        </a>
+    <?php else: ?>
         <a href="Connexion.php" class="nav-link hover:text-indigo-400 transition-colors">Connexion</a>
-      </div>
+    <?php endif; ?>
+</div>
+
       <button class="md:hidden" id="mobile-menu-btn">
         <i class="fas fa-bars"></i>
       </button>

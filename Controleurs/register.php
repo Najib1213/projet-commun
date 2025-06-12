@@ -10,8 +10,6 @@ function passwordRespecteLesCritères($mdp) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    file_put_contents(__DIR__ . '/debug_post.txt', print_r($_POST, true));
-
     $prenom = $_POST['prenom'] ?? '';
     $nom = $_POST['nom'] ?? '';
     $email = $_POST['email'] ?? '';
@@ -33,12 +31,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
+    if (emailExisteDeja($email)) {
+        header('Location: ../Vues/Inscription.php?error=Un compte avec cet email existe déjà.');
+        exit;
+    }
+
     if (creerUtilisateur($prenom, $nom, $email, $password)) {
         header('Location: ../Vues/Connexion.php');
         exit;
     } else {
-        header('Location: ../Vues/Inscription.php?error=Erreur lors de la création du compte (email existant ?).');
+        header('Location: ../Vues/Inscription.php?error=Erreur lors de la création du compte.');
         exit;
     }
 }
-?>

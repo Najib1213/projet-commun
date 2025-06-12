@@ -1,3 +1,11 @@
+<?php
+require_once '../Modèles/session.php';
+if (utilisateurConnecte()) {
+    header('Location: tableau.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -24,8 +32,6 @@
             </div>
             <div class="hidden md:flex space-x-6">
                 <a href="Accueil.html" class="nav-link hover:text-indigo-400 transition-colors">Accueil</a>
-                <a href="tableau.html" class="nav-link hover:text-indigo-400 transition-colors">Tableau de bord</a>
-                <a href="capteur.html" class="nav-link hover:text-indigo-400 transition-colors">Capteurs</a>
                 <a href="Connexion.php" class="nav-link text-indigo-400 hover:text-indigo-300 transition-colors">Connexion</a>
             </div>
             <button class="md:hidden" id="mobile-menu-btn">

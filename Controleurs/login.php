@@ -8,20 +8,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Vérifications serveur (anti-bypass JS)
     if (!preg_match('/@.+\.isep\.fr$/i', $email)) {
-        die("Adresse email invalide. Elle doit se terminer par '@xxxxx.isep.fr'");
+        header('Location: ../Vues/Connexion.php?error=Adresse email invalide (format .isep.fr attendu)');
+        exit;
     }
 
     if (trim($password) === '') {
-        die("Mot de passe requis.");
+        header('Location: ../Vues/Connexion.php?error=Mot de passe requis.');
+        exit;
     }
 
     $user = verifierConnexion($email, $password);
 
     if ($user) {
         $_SESSION['user'] = $user;
-        header('Location: ../Vues/tableau.html');
+        header('Location: ../Vues/tableau.php');
         exit;
     } else {
-        die("Email ou mot de passe incorrect.");
+        header('Location: ../Vues/Connexion.php?error=Email ou mot de passe incorrect.');
+        exit;
     }
 }
