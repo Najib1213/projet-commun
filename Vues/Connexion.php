@@ -35,7 +35,6 @@
     </div>
 </nav>
 
-<!-- Page d'authentification -->
 <section class="min-h-screen bg-gray-800 flex items-center">
     <div class="container mx-auto px-6 py-20">
         <div class="max-w-md mx-auto">
@@ -80,6 +79,6 @@
 </section>
 
 <script src="../Js/Accueil.js"></script>
-
+ 
 </body>
 </html>
