@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($user) {
         $_SESSION['user'] = $user;
-        header('Location: ../Vues/Accueil.html');
+        header('Location: ../Vues/tableau.html');
         exit;
     } else {
         die("Email ou mot de passe incorrect.");

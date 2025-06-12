@@ -10,7 +10,6 @@ function passwordRespecteLesCritères($mdp) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Debug temporaire pour vérifier la réception du POST
     file_put_contents(__DIR__ . '/debug_post.txt', print_r($_POST, true));
 
     $prenom = $_POST['prenom'] ?? '';

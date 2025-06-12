@@ -1,8 +1,8 @@
 Array
 (
-    [prenom] => Arthur
-    [nom] => Ferreira Dias
-    [email] => arfd62378@eleve.isep.fr
-    [password] => Emifpaac1$
-    [confirm_password] => Emifpaac1$
+    [prenom] => rara
+    [nom] => afez
+    [email] => admin@eleve.isep.fr
+    [password] => @&$53DAV0000id@&$
+    [confirm_password] => @&$53DAV0000id@&$
 )
