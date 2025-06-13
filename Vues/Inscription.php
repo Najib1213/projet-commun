@@ -27,7 +27,7 @@
           <h1 class="text-xl font-bold ml-3">TheaterSound</h1>
         </div>
         <div class="hidden md:flex space-x-6">
-          <a href="Accueil.html" class="nav-link hover:text-indigo-400 transition-colors">Accueil</a>
+          <a href="Accueil.php" class="nav-link hover:text-indigo-400 transition-colors">Accueil</a>
           <a href="Connexion.php" class="nav-link text-indigo-400 hover:text-indigo-300 transition-colors">Connexion</a>
         </div>
         <button class="md:hidden" id="mobile-menu-btn">
