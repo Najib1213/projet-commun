@@ -67,11 +67,11 @@ require_once '../Modèles/session.php';
                     Surveillez les niveaux de décibels en temps réel et optimisez l'expérience acoustique.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="tableau.html" class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 inline-block">
+                    <a href="tableau.php" class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 inline-block">
                         <i class="fas fa-chart-line mr-2"></i>
                         Tableau de bord
                     </a>
-                    <a href="capteur.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all inline-block">
+                    <a href="capteur.php" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all inline-block">
                         <i class="fas fa-cogs mr-2"></i>
                         Gérer les capteurs
                     </a>
