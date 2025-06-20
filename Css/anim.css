@@ -1,0 +1,42 @@
+    .sound-wave {
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: #6366f1;
+      margin-right: 2px;
+      border-radius: 2px;
+      animation: wave 1s infinite ease-in-out;
+      animation-delay: calc(-0.2s * var(--i, 0));
+    }
+
+    .sound-wave:nth-child(2) {
+      background: #818cf8;
+      --i: 1;
+    }
+
+    .sound-wave:nth-child(3) {
+      background: #a5b4fc;
+      --i: 2;
+    }
+
+    .sound-wave:nth-child(4) {
+      background: #818cf8;
+      --i: 3;
+    }
+
+    .sound-wave:nth-child(5) {
+      background: #6366f1;
+      --i: 4;
+    }
+
+    @keyframes wave {
+
+      0%,
+      100% {
+        height: 20px
+      }
+
+      50% {
+        height: 30px
+      }
+    }
