@@ -253,7 +253,7 @@ $data = array(
     array('Lumiere', ($luminosite && isset($luminosite['value_percent']) ? $luminosite['value_percent'].' lux' : 'aucune donnée'), ($luminosite && isset($luminosite['recorded_at']) ? $luminosite['recorded_at'] : '-')),
     array('Gaz (fumee)', ($gaz && isset($gaz['value_percent']) ? $gaz['value_percent'].' %' : 'aucune donnée'), ($gaz && isset($gaz['recorded_at']) ? $gaz['recorded_at'] : '-')),
     array('Temperature', ($temperature && isset($temperature['value_percent']) ? $temperature['value_percent'].' °C' : 'aucune donnée'), ($temperature && isset($temperature['recorded_at']) ? $temperature['recorded_at'] : '-')),
-    array('Humidite', ($humidite && isset($humidite['value_percent']) ? $humidite['value_percent'].' %' : 'aucune donnée'), ($humidite && isset($humidite['recorded_at']) ? $humidite['recorded_at'] : '-')),
+    array('Humidite', ($humidite && isset($humidite['value_percent']) ? $humidite['value_percent'].' %' : 'aucune donnee'), ($humidite && isset($humidite['recorded_at']) ? $humidite['recorded_at'] : '-')),
 );
 $pdf->SensorTable($header, $data);
 $pdfFile = 'export_capteurs_'.time().'.pdf';
