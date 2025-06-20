@@ -155,6 +155,6 @@ if (!ctx) {
             .catch(error => console.error("❌ Erreur de chargement des données :", error));
     }
 
-    setInterval(chargerDonnees, 10000);
+    setInterval(chargerDonnees, 1000);
     chargerDonnees();
 }

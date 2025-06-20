@@ -52,7 +52,6 @@ form.addEventListener("submit", (e) => {
   `;
 
   if (editingRow) {
-    // Remplacer la ligne existante par une nouvelle ligne DOM
     const temp = document.createElement("tbody");
     temp.innerHTML = rowHTML.trim();
     sensorTable.replaceChild(temp.firstElementChild, editingRow);
